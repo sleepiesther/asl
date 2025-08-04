@@ -7,6 +7,7 @@ startup
   vars.Helper.LoadSceneManager = true;
 
   vars.Helper.AlertLoadless();
+  settings.Add("sectionSplit", false, "Split on section change");
 }
 
 onStart
@@ -49,7 +50,8 @@ start
 
 split
 {
-  return old.State == 2 && current.State == 5
+
+  return (old.State == 2 && current.State == 5) || (settings["sectionSplit"] && current.Level != old.Level && current.Level != "MainMenu" && old.Level != "MainMenu" && old.state != 0)
     /* || old.CheckPoint != current.CheckPoint && settings[current.CheckPoint] */;
 }
 
