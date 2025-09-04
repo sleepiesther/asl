@@ -7,6 +7,7 @@ startup
   vars.Helper.LoadSceneManager = true;
 
   settings.Add("sectionSplit", false, "Split on section change");
+
   vars.Helper.AlertLoadless();
 }
 
