@@ -6,8 +6,8 @@ startup
   vars.Helper.GameName = "Sonic Project '06";
   vars.Helper.LoadSceneManager = true;
 
-  vars.Helper.AlertLoadless();
   settings.Add("sectionSplit", false, "Split on section change");
+  vars.Helper.AlertLoadless();
 }
 
 onStart
